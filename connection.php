@@ -9,5 +9,5 @@
     if ($conn->connect_error) {
         die("Connection failed: " . $conn->connect_error);
     }
-    echo "Successfully connected to server <br>";
+    //echo "Successfully connected to server <br>";
 ?>
