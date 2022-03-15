@@ -29,21 +29,21 @@
                                 <div class="input-group-prepend">
                                     <span class="input-group-text" id="inputGroup-sizing-sm">ชื่อ-สกุล</span>
                                 </div>
-                                <input type="text" readonly class="form-control" placeholder="เจ้าหน้าที่ กะดึกตลอดไป" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+                                <input type="text" readonly class="form-control" value="เจ้าหน้าที่ กะดึกตลอดไป" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
                             </div>
 
                             <div class="input-group input-group-sm mb-3">
                                 <div class="input-group-prepend">
                                     <span class="input-group-text" id="inputGroup-sizing-sm">รหัสเจ้าหน้าที่</span>
                                 </div>
-                                <input type="text" readonly class="form-control" placeholder="612547896" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+                                <input type="text" readonly class="form-control" value="612547896" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
                             </div>
 
                             <div class="input-group input-group-sm mb-3">
                                 <div class="input-group-prepend">
                                     <span class="input-group-text" id="inputGroup-sizing-sm">อีเมล</span>
                                 </div>
-                                <input type="text" readonly class="form-control" placeholder="admin_midnight@ku.th" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+                                <input type="text" readonly class="form-control" value="admin_midnight@ku.th" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
                             </div>
 
                             <a href="#" class="btn btn-primary">แก้ไขข้อมูล</a>
