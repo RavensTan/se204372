@@ -15,7 +15,7 @@
                     <div class="card text-center" style="height: 100%;">
                         <div class="card-body">
                             <h3 class="card-title">รูปนิสิต</h3>
-                            <img src="https://cdn-icons.flaticon.com/png/512/122/premium/122491.png?token=exp=1647156127~hmac=9c8ac00e509ba9fdbe0fbd4380ce5416" style="width: 300px">
+                            <img src="image/3135823.png" style="width: 300px">
                             <p class="card-text"></p>
                             <a href="#" class="btn btn-primary">แก้ไขรูปภาพ</a>
                         </div>
@@ -69,7 +69,15 @@
                                     <div class="input-group-prepend">
                                         <span class="input-group-text" id="inputGroup-sizing-sm">สถานะคำร้อง</span>
                                     </div>
-                                    <input type="text" readonly class="form-control"  value= <?php echo $student->petition_status; ?> aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+                                    <input type="text" readonly class="form-control"  value= <?php 
+                                    if($student->petition_status == NULL){
+                                        echo "คำร้องยังไม่ได้รับการตรวจสอบ";
+                                    }
+                                    else{
+                                        echo $student->petition_status;
+                                    }
+                                    
+                                    ?> aria-label="Small" aria-describedby="inputGroup-sizing-sm">
                                 </div>
 
                                 <div class="input-group input-group-sm mb-3">

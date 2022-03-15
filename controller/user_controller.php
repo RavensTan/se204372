@@ -7,3 +7,4 @@ class UserController
         require_once('view/profile/profile_student.php');
     }
 }
+?>

@@ -15,7 +15,7 @@
                     <div class="card text-center" style="height: 100%;">
                         <div class="card-body">
                             <h3 class="card-title">รูปอาจารย์</h3>
-                            <img src="https://cdn-icons.flaticon.com/png/512/122/premium/122491.png?token=exp=1647156127~hmac=9c8ac00e509ba9fdbe0fbd4380ce5416" style="width: 300px">
+                            <img src="image/3135823.png" style="width: 300px">
                             <p class="card-text"></p>
                             <a href="#" class="btn btn-primary">แก้ไขรูปภาพ</a>
                         </div>
