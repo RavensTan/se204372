@@ -1,13 +1,13 @@
 <?php
 $controllers = array(
     'pages' => ['home', 'error'],
-    'user' => ['user_list',],
+    'user' => ['user_list','teacher_list','admin_list'],
     'petition' => ['petition_list', 'update_petition','PetAdmin_list'],
 );
 
 function call($controller, $action)
 {
-    echo "routes to " . $controller . "-" . $action . "<br>";
+    // echo "routes to " . $controller . "-" . $action . "<br>";
     require_once("controller/" . $controller . "_controller.php");
     switch ($controller) {
         case "pages":
