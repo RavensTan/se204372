@@ -16,20 +16,15 @@ if (isset($_GET['controller']) && isset($_GET['action'])) {
             <div class="col-md-4 d-flex flex-wrap align-items-center justify-content-lg-start">
                 <h3>ระบบจัดการการฝึกงานและสหกิจแบบออนไลน์</h3>
 
-                <!-- <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
-
-                <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap">
-                    <use xlink:href="#bootstrap"></use>
-                </svg>
-            </a> -->
+               
             </div>
             <div class="col-md-8">
                 <ul class="nav col-12 col-lg-auto me-lg-auto mb-2  mb-md-0">
                     <li><a href="?controller=pages&action=home" class="nav-link px-2 text-white">หน้าหลัก</a></li>
                     <li><a href="?controller=user&action=user_list" class="nav-link px-2 text-white">บัญชีผู้ใช้</a></li>
-                    <li><a href="?controller=user&action=user_list" class="nav-link px-2 text-white">เอกสารที่เกี่ยวข้อง</a></li>
-                    <li><a href="?controller=user&action=user_list" class="nav-link px-2 text-white">จัดการเอกสาร</a></li>
-                    <li><a href="?controller=user&action=user_list" class="nav-link px-2 text-white">สถานประกอบการ</a></li>
+                    <li><a href="?controller=relatedDocument&action=relatedDocument" class="nav-link px-2 text-white">เอกสารที่เกี่ยวข้อง</a></li>
+                    <li><a href="?controller=manage&action=manage_student_list" class="nav-link px-2 text-white">จัดการเอกสาร</a></li>
+                    <li><a href="?controller=company&action=company_list" class="nav-link px-2 text-white">สถานประกอบการ</a></li>
                     <li><a href="?controller=user&action=user_list" class="nav-link px-2 text-white">ออกจากระบบ</a></li>
                     <!-- <li><a href="?controller=petition&action=petition_list" class="nav-link px-2 text-white">petition</a></li>
                 <li><a href="?controller=petition&action=PetAdmin_list" class="nav-link px-2 text-white">petition_ad</a></li> -->

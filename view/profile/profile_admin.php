@@ -24,7 +24,7 @@
                 <div class="col-sm-6">
                     <div class="card" style="height: 100%;">
                         <div class="card-body">
-                            <h3 class="card-title">ข้อมูลนิสิต</h3>
+                            <h3 class="card-title">ข้อมูลเจ้าหน้าที่</h3>
                             <div class="input-group input-group-sm mb-3">
                                 <div class="input-group-prepend">
                                     <span class="input-group-text" id="inputGroup-sizing-sm">ชื่อ-สกุล</span>

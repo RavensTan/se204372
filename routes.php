@@ -3,6 +3,13 @@ $controllers = array(
     'pages' => ['home', 'error'],
     'user' => ['user_list','teacher_list','admin_list'],
     'petition' => ['petition_list', 'update_petition','PetAdmin_list'],
+    'relatedDocument' => ['relatedDocument'],
+    'issueB' => ['issueB_teacher','issueB_of'],
+    'referralL' => ['referralL_teacher','referralL_of'],
+    'apprenticeshipL' => ['apprenticeshipL_teacher','apprenticeshipL_of'],
+    'manage' => ['manage_student_list','manage_teacher_list','manage_officer_list','edit_manage_teacher_list','edit_manage_office_list'],
+    'company' =>['company_list'],
+    'history' =>['history_list']
 );
 
 function call($controller, $action)
@@ -22,6 +29,27 @@ function call($controller, $action)
             require_once("models/studentModel.php");
             require_once("models/userModel.php");
             $controller = new PetitionController();
+            break;
+        case "relatedDocument":
+            $controller = new relatedDocumentController();
+            break;
+        case "issueB":
+            $controller = new issueBController();
+            break;
+        case "referralL":
+            $controller = new referralLController();
+            break;
+        case "apprenticeshipL":
+            $controller = new apprenticeshipLController();
+            break;
+        case "manage":
+            $controller = new manageController();
+            break;
+        case "company":
+            $controller = new companyController();
+            break;
+        case "history":
+            $controller = new historyController();
             break;
             // case "ProductDetail":
             //     require_once("models/ProductDetailModel.php");

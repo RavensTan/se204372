@@ -28,10 +28,10 @@ if (isset($_GET['controller']) && isset($_GET['action'])) {
                     <li><a href="?controller=pages&action=home" class="nav-link px-2 text-white">หน้าหลัก</a></li>
                     <li><a href="?controller=user&action=teacher_list" class="nav-link px-2 text-white">บัญชีผู้ใช้</a></li>
                     <li><a href="?controller=petition&action=petition_list" class="nav-link px-2 text-white">คำร้องนิสิต</a></li>
-                    <li><a href="?controller=user&action=user_list" class="nav-link px-2 text-white">จัดการเอกสาร</a></li>
-                    <li><a href="?controller=user&action=user_list" class="nav-link px-2 text-white">ออกหนังสือ</a></li>
-                    <li><a href="?controller=user&action=user_list" class="nav-link px-2 text-white">สถานประกอบการ</a></li>
-                    <li><a href="?controller=user&action=user_list" class="nav-link px-2 text-white">ประวัติการฝึกงาน</a></li>
+                    <li><a href="?controller=manage&action=manage_teacher_list" class="nav-link px-2 text-white">จัดการเอกสาร</a></li>
+                    <li><a href="?controller=issueB&action=issueB_teacher" class="nav-link px-2 text-white">ออกหนังสือ</a></li>
+                    <li><a href="?controller=company&action=company_list" class="nav-link px-2 text-white">สถานประกอบการ</a></li>
+                    <li><a href="?controller=history&action=history_list" class="nav-link px-2 text-white">ประวัติการฝึกงาน</a></li>
                     <li><a href="?controller=user&action=user_list" class="nav-link px-2 text-white">ออกจากระบบ</a></li>
                     <!-- <li><a href="?controller=petition&action=petition_list" class="nav-link px-2 text-white">petition</a></li>
                 <li><a href="?controller=petition&action=PetAdmin_list" class="nav-link px-2 text-white">petition_ad</a></li> -->
