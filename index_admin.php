@@ -1,4 +1,21 @@
 <?php
+session_start();
+include('connection.php');
+
+if(!isset($_SESSION['user_id'])) {
+    header('location: login.php');
+}
+
+$user_id = $_SESSION['user_id'];
+$name = $_SESSION['name'];
+$lastname = $_SESSION['lastname'];
+$ID = $_SESSION['ID'];
+$year = $_SESSION['year'];
+$train_status = $_SESSION['train_status'];
+$advisor = $_SESSION['advisor'];
+$type_id = $_SESSION['type_id'];
+$petition_id = $_SESSION['petition_id'];
+
 if (isset($_GET['controller']) && isset($_GET['action'])) {
     $controller = $_GET['controller'];
     $action = $_GET['action'];
@@ -6,6 +23,11 @@ if (isset($_GET['controller']) && isset($_GET['action'])) {
     $controller = 'pages';
     $action = 'home';
 }
+
+if($type_id!='3'){
+    header('location: logout.php');
+}
+
 ?>
 <html>
 <header class="p-3 bg-dark text-white">
@@ -32,13 +54,19 @@ if (isset($_GET['controller']) && isset($_GET['action'])) {
                     <li><a href="?controller=issueB&action=issueB_of" class="nav-link px-2 text-white">ออกหนังสือ</a></li>
                     <li><a href="?controller=company&action=company_list" class="nav-link px-2 text-white">สถานประกอบการ</a></li>
                     <li><a href="?controller=history&action=history_list" class="nav-link px-2 text-white">ประวัติการฝึกงาน</a></li>
-                    <li><a href="?controller=user&action=user_list" class="nav-link px-2 text-white">ออกจากระบบ</a></li>
+                    <li><a href="logout.php" class="nav-link px-2 text-white" >ออกจากระบบ</a></li>
                     <!-- <li><a href="?controller=petition&action=petition_list" class="nav-link px-2 text-white">petition</a></li>
                 <li><a href="?controller=petition&action=PetAdmin_list" class="nav-link px-2 text-white">petition_ad</a></li> -->
                     <!-- <li><a href="?controller=quataion&action=index" class="nav-link px-2 text-white">Quatation</a></li>
                 <li><a href="?controller=quationdetail&action=index" class="nav-link px-2 text-white">QuatationDetail</a></li>
                 <li><a href="?controller=ProductDetail&action=index" class="nav-link px-2 text-white">ProductDetail</a></li> -->
 
+
+                <!-- <form action="logout.php">
+                    <input type="submit" value="ออกจากระบบ">
+	            </form>  -->
+
+                
                 </ul>
             </div>
         </div>
