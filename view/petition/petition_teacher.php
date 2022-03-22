@@ -41,7 +41,7 @@
 
                                         ?>
                                             <tr>
-                                                <td><?php echo $student->name . " " . $student->lastname; ?></td>
+                                                <td><a href="pdffile/Presentation_ProjectSE_64.pdf" target="_blank"><?php echo $student->name . " " . $student->lastname; ?></a></td>  <!-- ใส่คำสั่งหรือหน้าเพื่อลิ้งไปหลังจากกดชื่อเพื่อเช็คข้างใน -->
                                                 <td>
                                                     <input type="checkbox" class="custom-control-input approve" id="<?php echo "approve_" . $student->petition_id; ?>">
                                                 </td>
