@@ -41,7 +41,7 @@
 
                                         ?>
                                             <tr>
-                                                <td><a href="pdffile/Presentation_ProjectSE_64.pdf" target="_blank"><?php echo $student->name . " " . $student->lastname; ?></a></td>  <!-- ใส่คำสั่งหรือหน้าเพื่อลิ้งไปหลังจากกดชื่อเพื่อเช็คข้างใน -->
+                                                <td><a href="#" class="link_pdf" target="_blank" id="<?php echo "link_" . $student->petition_id; ?>">  <?php echo $student->name . " " . $student->lastname; ?></a></td>  <!-- ใส่คำสั่งหรือหน้าเพื่อลิ้งไปหลังจากกดชื่อเพื่อเช็คข้างใน -->
                                                 <td>
                                                     <input type="checkbox" class="custom-control-input approve" id="<?php echo "approve_" . $student->petition_id; ?>">
                                                 </td>
@@ -109,6 +109,27 @@
 <script>
     var ArrApproveCheck = []
     var ArrDisApproveCheck = []
+
+    $(document).on("click", ".link_pdf", function(){
+
+        if (this.id == "link_P01")
+        {
+            $("#" + this.id).attr("href", "pdffile/Popratee.pdf")
+        }
+        else if (this.id == "link_P02")
+        {
+            $("#" + this.id).attr("href", "pdffile/Ngungnon.pdf")
+        }
+        else if (this.id == "link_P03")
+        {
+            $("#" + this.id).attr("href", "pdffile/Mhew.pdf")
+        }
+        else if (this.id == "link_P04")
+        {
+            $("#" + this.id).attr("href", "pdffile/Gerate.pdf")
+        }
+    })
+
 
     $(document).on("click", ".approve", function() {
         var id = this.id.split("approve_")
