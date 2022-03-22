@@ -25,14 +25,13 @@
 
                              
                                 <div class="row">
-                             
+                                   
 
 
-                                    <div class="d-grid gap-2 col-6 mx-auto"><br><br>
-                                     
+                                    <div class="d-grid gap-2 col-6 mx-auto">
+                                    <br><br>
                                         <a href="https://drive.google.com/drive/folders/1ZfCv01BJeAJ30DWNZ96z3Hz1u_WlVl36?usp=sharing"><button
                                                 class="btn btn-primary" type="button">ดาวน์โหลดเอกสารที่นี่</button></a>
-
 
                                     </div>
 
