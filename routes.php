@@ -2,7 +2,7 @@
 $controllers = array(
     'pages' => ['home', 'error'],
     'user' => ['user_list','teacher_list','admin_list'],
-    'petition' => ['petition_list', 'update_petition','PetAdmin_list'],
+    'petition' => ['petition_list', 'update_petition','PetAdmin_list', 'search_teacher','search_admin'],
     'relatedDocument' => ['relatedDocument'],
     'issueB' => ['issueB_teacher','issueB_of'],
     'referralL' => ['referralL_teacher','referralL_of'],

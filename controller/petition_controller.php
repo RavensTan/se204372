@@ -23,5 +23,31 @@ class PetitionController
         PetitionController::petition_list();
     }
 
+    public function search_teacher()
+    {
+        $key = $_GET['key'];
+        if($key != NULL){
+            $petitionStuList = student::search($key);
+            require_once('view/petition/petition_teacher.php');
+        }
+        else {
+            $petitionList = petition::getAll();
+            $petitionStuList = student::getStudent();
+            require_once('view/petition/petition_teacher.php');
+        }
+    }
+
+    public function search_admin()
+    {
+        $key = $_GET['key'];
+        if($key != NULL){
+            $petitionStuList = student::search($key);
+            require_once('view/petition/petition_admin.php');
+        }
+        else {
+            $petitionStuList = user::getAllUser();
+            require_once('view/petition/petition_admin.php');
+        }
+    }
 }
 ?>

@@ -17,8 +17,8 @@
 
                             <form method="get" action="" class="d-flex justify-content-end">
                                 <input class="form-control me-2" type="text" name="key" placeholder="Search" aria-label="Search" style="width: 25%;">
-                                <input type="hidden" name="controller" value="ProductDetail" />
-                                <button class="btn btn-primary" type="submit" name="action" value="search">
+                                <input type="hidden" name="controller" value="petition" />
+                                <button class="btn btn-primary" type="submit" name="action" value="search_admin">
                                     Search
                                 </button>
                             </form>
@@ -33,8 +33,6 @@
 
                                     <tbody>
                                         <?php
-
-
                                         foreach ($petitionStuList as $student) {
 
                                         ?>

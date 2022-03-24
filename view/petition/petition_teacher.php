@@ -18,8 +18,8 @@
 
                             <form method="get" action="" class="d-flex justify-content-end">
                                 <input class="form-control me-2" type="text" name="key" placeholder="Search" aria-label="Search" style="width: 25%;">
-                                <input type="hidden" name="controller" value="ProductDetail" />
-                                <button class="btn btn-primary" type="submit" name="action" value="search">
+                                <input type="hidden" name="controller" value="petition" />
+                                <button class="btn btn-primary" type="submit" name="action" value="search_teacher">
                                     Search
                                 </button>
                             </form>
@@ -35,26 +35,42 @@
 
                                     <tbody>
                                         <?php
-
-
                                         foreach ($petitionStuList as $student) {
-
                                         ?>
                                             <tr>
-                                                <td><a href="#" class="link_pdf" target="_blank" id="<?php echo "link_" . $student->petition_id; ?>">  <?php echo $student->name . " " . $student->lastname; ?></a></td>  <!-- ใส่คำสั่งหรือหน้าเพื่อลิ้งไปหลังจากกดชื่อเพื่อเช็คข้างใน -->
-                                                <td>
-                                                    <input type="checkbox" class="custom-control-input approve" id="<?php echo "approve_" . $student->petition_id; ?>">
-                                                </td>
-                                                <td>
-                                                    <input type="checkbox" class="custom-control-input disapprove" id="<?php echo "disapprove_" . $student->petition_id; ?>">
-                                                </td>
-
-
-                                                <!-- <td><a href="?controller=ProductDetail&action=update_ProductDetail&ProductDID=<?php echo $pd->ProductDID ?>" class="btn btn-primary">Edit</td>
-                                                <td><a href="?controller=ProductDetail&action=delete_ProductDetail&ProductDID=<?php echo $pd->ProductDID ?>" class="btn btn-danger">Delete</td> -->
+                                                <td><a href="#" class="link_pdf" target="_blank" id="<?php echo "link_" . $student->petition_id; ?>"> <?php echo $student->name . " " . $student->lastname; ?></a></td> <!-- ใส่คำสั่งหรือหน้าเพื่อลิ้งไปหลังจากกดชื่อเพื่อเช็คข้างใน -->
+                                                <?php
+                                                if ($student->petition_status == "อนุมัติ") {
+                                                ?>
+                                                    <td>
+                                                        <input type="checkbox" class="custom-control-input approve" checked id="<?php echo "approve_" . $student->petition_id; ?>">
+                                                    </td>
+                                                    <td>
+                                                        <input type="checkbox" class="custom-control-input disapprove" disabled id="<?php echo "disapprove_" . $student->petition_id; ?>">
+                                                    </td>
+                                                <?php
+                                                } elseif ($student->petition_status == "ไม่อนุมัติ") {
+                                                ?>
+                                                    <td>
+                                                        <input type="checkbox" class="custom-control-input approve" disabled id="<?php echo "approve_" . $student->petition_id; ?>">
+                                                    </td>
+                                                    <td>
+                                                        <input type="checkbox" class="custom-control-input disapprove" checked id="<?php echo "disapprove_" . $student->petition_id; ?>">
+                                                    </td>
+                                                <?php
+                                                } else {
+                                                ?>
+                                                    <td>
+                                                        <input type="checkbox" class="custom-control-input approve" id="<?php echo "approve_" . $student->petition_id; ?>">
+                                                    </td>
+                                                    <td>
+                                                        <input type="checkbox" class="custom-control-input disapprove" id="<?php echo "disapprove_" . $student->petition_id; ?>">
+                                                    </td>
+                                                <?php
+                                                }
+                                                ?>
                                             </tr>
                                         <?php
-
                                         }
                                         ?>
 
@@ -81,24 +97,6 @@
                         </div>
                     </div>
                 </div>
-                <!-- <div class="col-sm-6">
-                    <div class="card" style="height: 100%; text-align: center;">
-                        <div class="card-body">
-                            <h3 class="card-title">อนุมัติคำร้องนิสิต</h3>
-                            <div class="row">
-                                <div class="col-sm-6">
-                                    <a href="#" class="btn btn-primary">บันทึก</a>
-                                </div>
-                                <div class="col-sm-6">
-                                    <a href="#" class="btn btn-primary">ยกเลิก</a>
-                                </div>
-                            </div>
-
-
-
-                        </div>
-                    </div>
-                </div> -->
             </div>
         </div>
     </div>
@@ -110,27 +108,18 @@
     var ArrApproveCheck = []
     var ArrDisApproveCheck = []
 
-    $(document).on("click", ".link_pdf", function(){
+    $(document).on("click", ".link_pdf", function() {
 
-        if (this.id == "link_P01")
-        {
+        if (this.id == "link_P01") {
             $("#" + this.id).attr("href", "pdffile/Popratee.pdf")
-        }
-        else if (this.id == "link_P02")
-        {
+        } else if (this.id == "link_P02") {
             $("#" + this.id).attr("href", "pdffile/Ngungnon.pdf")
-        }
-        else if (this.id == "link_P03")
-        {
+        } else if (this.id == "link_P03") {
             $("#" + this.id).attr("href", "pdffile/Mhew.pdf")
-        }
-        else if (this.id == "link_P04")
-        {
+        } else if (this.id == "link_P04") {
             $("#" + this.id).attr("href", "pdffile/Gerate.pdf")
         }
     })
-
-
     $(document).on("click", ".approve", function() {
         var id = this.id.split("approve_")
 
